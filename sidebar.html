@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Solicitation Extractor Sidebar</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 10px;
+      }
+      .field {
+        margin-bottom: 10px;
+      }
+      .label {
+        font-weight: bold;
+      }
+      .value {
+        background: #f4f4f4;
+        padding: 5px;
+        border-radius: 3px;
+      }
+      .error {
+        color: red;
+      }
+      button {
+        margin-top: 10px;
+        padding: 8px 30px;
+        background: #0078d7;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background 0.2s, box-shadow 0.2s;
+      }
+      button:hover,
+      button:focus {
+        background: #005fa3;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+        outline: none;
+      }
+      .value {
+        background: #f4f4f4;
+        padding: 5px;
+        border-radius: 3px;
+        cursor: pointer;
+        transition: background 0.2s;
+      }
+      .value:hover,
+      .value:focus {
+        background: #e0eaff;
+        outline: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="ezgovSidebar" style="position: relative">
+      <span
+        id="ezgovSidebarClose"
+        style="
+          position: absolute;
+          top: 10px;
+          right: 10px;
+          cursor: pointer;
+          font-size: 18px;
+        "
+        >&times;</span
+      >
+      <h2>Solicitation Info</h2>
+      <div id="ezgovSidebarResult">Loading...</div>
+      <button onclick="window.ezgovCopyAll()">Copy All</button>
+    </div>
+    <script src="sidebar.js"></script>
+  </body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Solicitation Extractor Options</title>
+    <style>
+      body {
+        font-family: "Segoe UI", Arial, sans-serif;
+        background: #f8f9fa;
+        margin: 0;
+        padding: 0;
+        min-height: 100vh;
+      }
+      .container {
+        background: #fff;
+        max-width: 400px;
+        margin: 40px auto 0 auto;
+        padding: 32px 28px 24px 28px;
+        border-radius: 14px;
+        box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
+      }
+      h2 {
+        margin-top: 0;
+        color: #2356c7;
+        font-size: 1.5em;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+      }
+      label {
+        display: block;
+        margin-top: 18px;
+        font-size: 1em;
+        color: #333;
+        font-weight: 500;
+      }
+      input,
+      select {
+        width: 100%;
+        padding: 10px 12px;
+        margin-top: 6px;
+        border: 1px solid #d1d5db;
+        border-radius: 7px;
+        font-size: 1em;
+        background: #f4f6fb;
+        transition: border 0.2s;
+        box-sizing: border-box;
+        appearance: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+      }
+      input:focus,
+      select:focus {
+        border: 1.5px solid #4f8cff;
+        outline: none;
+        background: #fff;
+      }
+      button {
+        width: 100%;
+        margin-top: 22px;
+        padding: 12px 0;
+        font-size: 16px;
+        font-weight: 600;
+        background: linear-gradient(90deg, #4f8cff 0%, #2356c7 100%);
+        color: #fff;
+        border: none;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(79, 140, 255, 0.08);
+        cursor: pointer;
+        transition: background 0.2s;
+      }
+      button:hover {
+        background: linear-gradient(90deg, #2356c7 0%, #4f8cff 100%);
+      }
+      #status {
+        margin-top: 18px;
+        color: #2356c7;
+        font-size: 15px;
+        text-align: center;
+        min-height: 18px;
+        background: #eaf1ff;
+        border-radius: 6px;
+        padding: 6px 0;
+        transition: background 0.2s, color 0.2s;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>OpenAI Settings</h2>
+      <label
+        >API Key:
+        <input type="password" id="apiKey" placeholder="sk-..." />
+      </label>
+      <button onclick="save()">Save</button>
+      <div id="status"></div>
+    </div>
+    <script src="options.js"></script>
+  </body>
+</html>

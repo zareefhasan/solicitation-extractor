@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Solicitation Extractor</title>
+    <style>
+      body {
+        font-family: "Segoe UI", Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        width: 270px;
+        background: #f8f9fa;
+        border-radius: 12px;
+        box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
+        min-height: 50px;
+      }
+      .container {
+        padding: 22px 18px 18px 18px;
+      }
+      button {
+        width: 100%;
+        padding: 12px 0;
+        font-size: 16px;
+        font-weight: 600;
+        background: linear-gradient(90deg, #4f8cff 0%, #2356c7 100%);
+        color: #fff;
+        border: none;
+        border-radius: 8px;
+        box-shadow: 0 2px 8px rgba(79, 140, 255, 0.08);
+        cursor: pointer;
+        transition: background 0.2s;
+        margin-bottom: 12px;
+      }
+      button:hover {
+        background: linear-gradient(90deg, #2356c7 0%, #4f8cff 100%);
+      }
+      a {
+        display: block;
+        text-align: right;
+        font-size: 13px;
+        color: #4f8cff;
+        text-decoration: none;
+        margin-top: 10px;
+        transition: color 0.2s;
+      }
+      a:hover {
+        color: #2356c7;
+        text-decoration: underline;
+      }
+      #status {
+        margin-top: 12px;
+        color: #2356c7;
+        font-size: 14px;
+        text-align: center;
+        min-height: 18px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container" style="position: relative; min-height: 120px">
+      <button id="runBtn">Run Extractor</button>
+      <div
+        style="
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+          position: absolute;
+          left: 14px;
+          right: 18px;
+          bottom: 18px;
+        "
+      >
+        <div style="display: flex; align-items: center">
+          <input
+            type="checkbox"
+            id="downloadTextCheckbox"
+            style="margin-right: 6px"
+          />
+          <label
+            for="downloadTextCheckbox"
+            style="font-size: 13px; color: #333; cursor: pointer"
+            >Download Text</label
+          >
+        </div>
+        <a href="#" id="settingsLink" style="margin: 0">Settings</a>
+      </div>
+      <div id="status"></div>
+    </div>
+    <script src="popup.js"></script>
+  </body>
+</html>
